@@ -23,7 +23,7 @@
 // |  |SHFT/A| CTRL/S| ALT/D| GUI/F|   G  |             |  H   | GUI/J| ALT/K|CTRL/L|SHFT/;|  |
 // |  |  Z   |  X    |  C   |  V   |   B  |             |  N   |  M   |  ,   |  .   |   /  |  |
 //
-//            |  CTRL/. |  SYM/:  |   SPC   |         |   ENT   | SYM/BSPC| CTRL/DEL|
+//            |  CTRL/. |  SYM/:  | NUM/SPC |         | NUM/ENT | SYM/BSPC| CTRL/DEL|
 //
 //
 //
@@ -34,7 +34,7 @@
    &trans          &kp Q           &kp W           &kp E           &kp R           &kp T           &kp Y           &kp U           &kp I           &kp O           &kp P           &trans
    &trans          &mt LSHIFT A    &mt LCTRL S     &mt LALT D      &mt LGUI F      &kp G           &kp H           &mt LGUI J      &kp K           &kp L           &mt RSHIFT SEMI &trans
    &trans          &kp Z           &kp X           &kp C           &kp V           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &kp FSLH        &trans
-                                                   &lt 3 DOT       &lt 2 COLON     &kp SPACE       &kp RET         &lt 2 BSPC      &lt 3 DEL
+                                                   &lt 3 DOT       &lt 2 COLON     &lt 1 SPACE     &lt 1 RET       &lt 2 BSPC      &lt 3 DEL
                         >;
                 };
 //
@@ -45,18 +45,18 @@
 // |  |      |      |      |      |      |              |      |   4  |   5  |   6  |     |  |
 // |  |      |      |      |      |      |              |      |   1  |   2  |   3  |     |  |
 //
-//            |  CTRL/. |  SYM/:  |   SPC   |         |   ENT   | SYM/BSPC|    0    |
+//            |  CTRL/. |  SYM/:  | NUM/SPC |         | NUM/ENT | SYM/BSPC|    0    |
 //
 //
 //
 
                 number_layer {
-                        display-name = "NUM";
+                        display-name = "/";
                         bindings = <
    &trans          &trans          &trans          &trans          &trans          &trans          &trans          &kp N7          &kp N8          &kp N9          &trans          &trans
    &trans          &trans          &trans          &trans          &trans          &trans          &trans          &kp N4          &kp N5          &kp N6          &trans          &trans
    &trans          &trans          &trans          &trans          &trans          &trans          &trans          &kp N1          &kp N2          &kp N3          &trans          &trans
-                                                   &lt 3 DOT       &lt 2 COLON     &kp SPACE       &kp RET         &lt 2 BSPC      &kp 0
+                                                   &lt 3 DOT       &lt 2 COLON     &lt 1 SPACE     &lt 1 RET       &lt 2 BSPC      &kp 0
                         >;
                 };
 //
@@ -67,7 +67,7 @@
 // |  |SHFT/!|   @  |   #  |   $  |  %   |              |   ^  |   &  |   *  |   (  |   )  |  |
 // |  |      |      |      |      |      |              |   ?  |   '  |   "  |   [  |   ]  |  |
 //
-//            |  CTRL/. |  SYM/:  |   SPC   |         |    ,    |    <    |    >    |
+//            |  CTRL/. |  SYM/:  | NUM/SPC |         |    ,    |    <    |    >    |
 //
 //
 //
@@ -78,7 +78,7 @@
    &trans          &kp GRAVE       &kp TILDE       &kp FSLH        &kp BSLH        &kp PIPE        &kp UNDER       &kp MINUS       &kp EQUAL       &kp LBRC        &kp RBRC        &trans
    &trans          &mt LSHIFT EXCL &kp AT          &kp POUND       &kp DLLR        &kp PRCNT       &kp CARET       &kp AMPS        &kp ASTRK       &kp LPAR        &kp RPAR        &trans
    &trans          &trans          &trans          &trans          &trans          &trans          &kp QMARK       &kp APOS        &kp DQT         &kp LBKT        &kp RBKT        &trans
-                                                   &lt 3 DOT       &lt 2 COLON     &kp SPACE       &kp COMMA       &kp LT          &kp GT
+                                                   &lt 3 DOT       &lt 2 COLON     &lt 1 SPACE     &kp COMMA       &kp LT          &kp GT
                         >;
                 };
 
@@ -90,7 +90,7 @@
 // |  | SHFT | TAB  |      |      |      |               |      | LEFT | DOWN | RGHT | SHFT |  |
 // |  |      |      |      |      |      |               |      |      |      |      |      |  |
 //
-//            |  CTRL/. |  SYM/:  |   SPC   |         |   ENT   | SYM/BSPC| CTRL/DEL|
+//            |  CTRL/. |  SYM/:  | NUM/SPC |         | NUM/ENT | SYM/BSPC| CTRL/DEL|
 //
 //
 //
@@ -101,7 +101,7 @@
    &trans          &trans          &kp ESC         &trans          &trans          &trans          &trans          &trans          &kp UP          &trans          &trans          &trans
    &trans          &kp LSHFT       &kp TAB         &trans          &trans          &trans          &trans          &kp LEFT        &kp DOWN        &kp RIGHT       &kp RSHFT       &trans
    &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
-                                                   &lt 3 DOT       &lt 2 COLON     &kp SPACE       &kp RET         &lt 2 BSPC      &lt 3 DEL
+                                                   &lt 3 DOT       &lt 2 COLON     &lt 1 SPACE     &lt 1 RET       &lt 2 BSPC      &lt 3 DEL
                         >;
                 };
         };
