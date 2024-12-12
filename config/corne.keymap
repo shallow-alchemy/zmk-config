@@ -20,15 +20,15 @@
                 default_layer {
                         display-name = "QWERTY";
 // --------------------------------------------------------------------------------------------
-// |  |  Q   |  W    |  E   |  R   |   T  |             |  Y   |  U   |  I   | O    | RGB/P|  |
-// |  |SHFT/A| CTRL/S| ALT/D| GUI/F|   G  |             |  H   | GUI/J| ALT/K|CTRL/L|SHFT/;|  |
-// |  |  Z   |  X    |  C   |  V   |   B  |             |  N   |  M   |  ,   |  .   |   /  |  |
+// |  |  Q   |  W   |  E   |  R   |   T  |             |  Y   |  U   |  I   | O    | RGB/P|  |
+// |  |  A   |  S   |  D   |  F   |   G  |             |  H   |  J   |  K   | L    | ;    |  |
+// |  |SHFT/Z|CTRL/X| ALT/C| GUI/V|   B  |             |  N   | GUI/M| ALT/,|CTRL/.|SHFT//|  |
 //
 //            |  CTRL/. |  SYM/:  | NUM/SPC |         | NUM/ENT | SYM/BSPC| CTRL/DEL|
                         bindings = <
-   &trans          &kp Q           &kp W           &kp E           &kp R           &kp T           &kp Y           &kp U           &kp I           &kp O           &lt 4 P           &trans
-   &trans          &mt LSHIFT A    &mt LCTRL S     &mt LALT D      &mt LGUI F      &kp G           &kp H           &mt LGUI J      &kp K           &kp L           &mt RSHIFT SEMI &trans
-   &trans          &kp Z           &kp X           &kp C           &kp V           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &kp FSLH        &trans
+   &trans          &kp Q           &kp W           &kp E           &kp R           &kp T           &kp Y           &kp U           &kp I           &kp O           &lt 4 P          &trans
+   &trans          &kp A           &kp S           &kp D           &kp F           &kp G           &kp H           &kp J           &kp K           &kp L           &kp SEMI         &trans
+   &trans          &mt LSHIFT Z    &mt LCTRL X     &mt LALT C      &mt LGUI V      &kp B           &kp N           &mt RGUI M      &mt RALT COMMA  &mt RCTRL DOT   &mt RSHIFT FSLH  &trans
                                                    &lt 3 DOT       &lt 2 COLON     &lt 1 SPACE     &lt 1 RET       &lt 2 BSPC      &lt 3 DEL
                         >;
                 };
@@ -66,14 +66,14 @@
                         display-name = "SYM";
 // --------------------------------------------------------------------------------------------
 // |  |  `   |   ~  |   /  |   \  |  |   |              |   _  |   -  |   =  |   {  |   }  |  |
-// |  |SHFT/!|   @  |   #  |   $  |  %   |              |   ^  |   &  |   *  |   (  |   )  |  |
-// |  |      |      |      |      |      |              |   ?  |   '  |   "  |   [  |   ]  |  |
+// |  |  !   |   @  |   #  |   $  |  %   |              |   ^  |   &  |   *  |   (  |   )  |  |
+// |  |SHFT/!|      |      |      |      |              |   ?  |   '  |   "  |   [  |   ]  |  |
 //
 //            |  CTRL/. |  SYM/:  | NUM/SPC |         |    ,    |    <    |    >    |
                         bindings = <
    &trans          &kp GRAVE       &kp TILDE       &kp FSLH        &kp BSLH        &kp PIPE        &kp UNDER       &kp MINUS       &kp EQUAL       &kp LBRC        &kp RBRC        &trans
-   &trans          &mt LSHIFT EXCL &kp AT          &kp POUND       &kp DLLR        &kp PRCNT       &kp CARET       &kp AMPS        &kp ASTRK       &kp LPAR        &kp RPAR        &trans
-   &trans          &trans          &trans          &trans          &trans          &trans          &kp QMARK       &kp APOS        &kp DQT         &kp LBKT        &kp RBKT        &trans
+   &trans          &kp EXCL        &kp AT          &kp POUND       &kp DLLR        &kp PRCNT       &kp CARET       &kp AMPS        &kp ASTRK       &kp LPAR        &kp RPAR        &trans
+   &trans          &mt LSHIFT EXCL &trans          &trans          &trans          &trans          &kp QMARK       &kp APOS        &kp DQT         &kp LBKT        &kp RBKT        &trans
                                                    &lt 3 DOT       &lt 2 COLON     &lt 1 SPACE     &kp COMMA       &kp LT          &kp GT
                         >;
                 };
