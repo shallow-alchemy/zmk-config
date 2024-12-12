@@ -11,7 +11,7 @@
 #define RGB 4
 
 &mt {
-    tapping-term-ms = <130>;
+    tapping-term-ms = <140>;
 };
 
 / {
