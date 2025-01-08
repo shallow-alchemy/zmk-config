@@ -22,9 +22,9 @@
                 colemak_layer {
                         display-name = "COLEMAK";
 // --------------------------------------------------------------------------------------------
-// |  |  Q   |  W   |  E   |  R   |   T  |             |  Y   |  U   |  I   | O    | RGB/P|  |
-// |  |  A   |  S   |  D   |  F   |   G  |             |  H   |  J   |  K   | L    | ;    |  |
-// |  |SHFT/Z|CTRL/X| ALT/C| GUI/V|   B  |             |  N   | GUI/M| ALT/,|CTRL/.|SHFT//|  |
+// |  |  Q   |  W   |  F   |  P   |   G  |             |  J   |  L   |  U   | Y    | ;    |  |
+// |  |  A   |  R   |  S   |  T   |   D  |             |  H   |  N   |  E   | I    | O    |  |
+// |  |SHFT/Z|CTRL/X| ALT/C| GUI/V|   B  |             |  K   | GUI/M| ALT/,|CTRL/.|SHFT//|  |
 //
 //            |  CTRL/. |  SYM/:  | NUM/SPC |         | NUM/ENT | SYM/BSPC| CTRL/DEL|
                         bindings = <
@@ -38,7 +38,7 @@
 
 
 
-                qwerty_layer {
+                default_layer {
                         display-name = "QWERTY";
 // --------------------------------------------------------------------------------------------
 // |  |  Q   |  W   |  E   |  R   |   T  |             |  Y   |  U   |  I   | O    | RGB/P|  |
