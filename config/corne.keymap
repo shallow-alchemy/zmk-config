@@ -9,7 +9,7 @@
 #define NUM 2
 #define SYM 3
 #define CTRL 4
-#define RGB 5
+#define MEDIA 5
 
 
 / {
@@ -29,7 +29,7 @@
                 colemak_layer {
                         display-name = "COLEMAK";
                         bindings = <
-   &trans          &kp Q           &kp W           &kp F           &kp P           &kp G           &kp J           &kp L           &kp U           &kp Y           &kp SEMI         &trans
+   &trans          &kp Q           &kp W           &kp F           &kp P           &kp G           &kp J           &kp L           &kp U           &kp Y           &lt 5 SEMI       &trans
    &trans          &kp A           &kp R           &kp S           &kp T           &kp D           &kp H           &kp N           &kp E           &kp I           &kp O            &trans
    &trans          &cht LSHIFT Z   &cht LCTRL X    &cht LALT C     &cht LGUI V     &kp B           &kp K           &cht RGUI M     &cht RALT COMMA &cht RCTRL DOT  &cht RSHIFT FSLH &trans
                                                    &lt 3 DOT       &lt 4 COLON     &lt 2 SPACE     &lt 2 RET       &lt 4 BSPC      &lt 3 DEL
@@ -76,12 +76,12 @@
                         >;
                 };
 
-                rgb_layer {
-                        display-name = "RGB";
+                media_layer {
+                        display-name = "MEDIA";
                         bindings = <
-   &trans          &rgb_ug RGB_ON  &rgb_ug RGB_HUI &rgb_ug RGB_SAI &rgb_ug RGB_BRI &rgb_ug RGB_SPI &bl BL_TOG      &bl BL_INC      &bl BL_CYCLE    &trans          &trans          &trans
-   &trans          &rgb_ug RGB_OFF &rgb_ug RGB_HUD &rgb_ug RGB_SAD &rgb_ug RGB_BRD &rgb_ug RGB_SPD &trans          &bl BL_DEC      &trans          &trans          &trans          &trans
-   &trans          &trans          &trans          &trans          &trans          &rgb_ug RGB_TOG &trans          &trans          &trans          &trans          &trans          &trans
+   &trans          &rgb_ug RGB_TOG &rgb_ug RGB_HUI &rgb_ug RGB_SAI &rgb_ug RGB_BRI &trans          &trans          &kp C_MUTE      &kp C_VOL_UP    &kp C_VOL_DN    &lt 5 SEMI      &trans
+   &trans          &trans          &rgb_ug RGB_HUD &rgb_ug RGB_SAD &rgb_ug RGB_BRD &trans          &trans          &trans          &trans          &trans          &trans          &trans
+   &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
                                                    &lt 3 DOT       &lt 4 COLON     &lt 2 SPACE     &lt 2 RET       &lt 4 BSPC      &lt 3 DEL
                         >;
                 };
