@@ -11,11 +11,18 @@
 #define CTRL 4
 #define RGB 5
 
-&mt {
-    tapping-term-ms = <200>;
-};
 
 / {
+        behaviors {
+                cht: custom_hold_tap {
+                        compatible = "zmk,behavior-hold-tap";
+                        #binding-cells = <2>;
+                        flavor = "tap-preferred";
+                        tapping-term-ms = <200>;
+                        quick-tap-ms = <200>;
+                        bindings = <&kp>, <&kp>;
+                }
+        }
         keymap {
                 compatible = "zmk,keymap";
 
@@ -24,7 +31,7 @@
                         bindings = <
    &trans          &kp Q           &kp W           &kp F           &kp P           &kp G           &kp J           &kp L           &kp U           &kp Y           &kp SEMI         &trans
    &trans          &kp A           &kp R           &kp S           &kp T           &kp D           &kp H           &kp N           &kp E           &kp I           &kp O            &trans
-   &trans          &mt LSHIFT Z    &mt LCTRL X     &mt LALT C      &mt LGUI V      &kp B           &kp K           &mt RGUI M      &mt RALT COMMA  &mt RCTRL DOT   &mt RSHIFT FSLH  &trans
+   &trans          &cht LSHIFT Z   &cht LCTRL X    &cht LALT C     &cht LGUI V     &kp B           &kp K           &cht RGUI M     &cht RALT COMMA &cht RCTRL DOT  &cht RSHIFT FSLH &trans
                                                    &lt 3 DOT       &lt 4 COLON     &lt 2 SPACE     &lt 2 RET       &lt 4 BSPC      &lt 3 DEL
                         >;
                 };
@@ -34,7 +41,7 @@
                         bindings = <
    &trans          &kp Q           &kp W           &kp E           &kp R           &kp T           &kp Y           &kp U           &kp I           &kp O           &lt 5 P          &trans
    &trans          &kp A           &kp S           &kp D           &kp F           &kp G           &kp H           &kp J           &kp K           &kp L           &kp SEMI         &trans
-   &trans          &mt LSHIFT Z    &mt LCTRL X     &mt LALT C      &mt LGUI V      &kp B           &kp N           &mt RGUI M      &mt RALT COMMA  &mt RCTRL DOT   &mt RSHIFT FSLH  &trans
+   &trans          &cht LSHIFT Z   &cht LCTRL X    &cht LALT C     &cht LGUI V     &kp B           &kp N           &cht RGUI M     &cht RALT COMMA &cht RCTRL DOT  &cht RSHIFT FSLH &trans
                                                    &lt 3 DOT       &lt 4 COLON     &lt 2 SPACE     &lt 2 RET       &lt 4 BSPC      &lt 3 DEL
                         >;
                 };
@@ -54,7 +61,7 @@
                         bindings = <
    &trans          &kp GRAVE       &kp TILDE       &kp FSLH        &kp BSLH        &kp PIPE        &kp UNDER       &kp MINUS       &kp EQUAL       &kp LBRC        &kp RBRC        &trans
    &trans          &kp EXCL        &kp AT          &kp POUND       &kp DLLR        &kp PRCNT       &kp CARET       &kp AMPS        &kp ASTRK       &kp LPAR        &kp RPAR        &trans
-   &trans          &mt LSHIFT EXCL &trans          &trans          &trans          &trans          &kp QMARK       &kp APOS        &kp DQT         &kp LBKT        &kp RBKT        &trans
+   &trans          &cht LSHIFT EXCL &trans         &trans          &trans          &trans          &kp QMARK       &kp APOS        &kp DQT         &kp LBKT        &kp RBKT        &trans
                                                    &lt 3 DOT       &lt 4 COLON     &lt 2 SPACE     &kp COMMA       &kp LT          &kp GT
                         >;
                 };
