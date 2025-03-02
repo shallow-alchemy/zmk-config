@@ -26,19 +26,19 @@
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
                         tapping-term-ms = <200>;
-                        bindings = <&cht LCTRL X>, <&kp K_CUT>;
+                        bindings = <&cht LCTRL X>, <&kp LG(X)>;
                 };
                 td_copy: tap_dance_copy {
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
                         tapping-term-ms = <200>;
-                        bindings = <&cht LALT C>, <&kp K_COPY>;
+                        bindings = <&cht LALT C>, <&kp LG(C)>;
                 };
                 td_paste: tap_dance_paste {
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
                         tapping-term-ms = <200>;
-                        bindings = <&cht LGUI V>, <&kp K_PASTE>;
+                        bindings = <&cht LGUI V>, <&kp LG(V)>;
                 };
         };
         keymap {
