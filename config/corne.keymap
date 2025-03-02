@@ -22,23 +22,23 @@
                         quick-tap-ms = <200>;
                         bindings = <&kp>, <&kp>;
                 };
-        };
-        combos {
-                compatible = "zmk,combos";
-                combo_cut {
-                        timeout-ms = <100>;
-                        key-positions = <25 26>;
-                        bindings = <&kp 1>;
+                td_cut: tap_dance_cut {
+                        compatible = "zmk,behavior-tap-dance";
+                        #binding-cells = <0>;
+                        tapping-term-ms = <200>;
+                        bindings = <&cht LCTRL X>, <&kp N1>;
                 };
-                combo_copy {
-                        timeout-ms = <100>;
-                        key-positions = <25 27>;
-                        bindings = <&kp 2>;
+                td_copy: tap_dance_copy {
+                        compatible = "zmk,behavior-tap-dance";
+                        #binding-cells = <0>;
+                        tapping-term-ms = <200>;
+                        bindings = <&cht LALT C>, <&kp N2>;
                 };
-                combo_paste {
-                        timeout-ms = <100>;
-                        key-positions = <25 28>;
-                        bindings = <&kp 3>;
+                td_paste: tap_dance_paste {
+                        compatible = "zmk,behavior-tap-dance";
+                        #binding-cells = <0>;
+                        tapping-term-ms = <200>;
+                        bindings = <&cht LGUI V>, <&kp N3>;
                 };
         };
         keymap {
@@ -49,7 +49,7 @@
                         bindings = <
    &trans          &kp Q           &kp W           &kp F           &kp P           &kp G           &kp J           &kp L           &kp U           &kp Y           &lt 5 SEMI       &trans
    &trans          &kp A           &kp R           &kp S           &kp T           &kp D           &kp H           &kp N           &kp E           &kp I           &kp O            &trans
-   &trans          &cht LSHIFT Z   &cht LCTRL X    &cht LALT C     &cht LGUI V     &kp B           &kp K           &cht RGUI M     &cht RALT COMMA &cht RCTRL DOT  &cht RSHIFT FSLH &trans
+   &trans          &cht LSHIFT Z   &td_cut         &td_copy        &td_paste       &kp B           &kp K           &cht RGUI M     &cht RALT COMMA &cht RCTRL DOT  &cht RSHIFT FSLH &trans
                                                    &lt 3 DOT       &lt 4 COLON     &lt 2 SPACE     &lt 2 RET       &lt 4 BSPC      &lt 3 DEL
                         >;
                 };
