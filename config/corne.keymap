@@ -25,10 +25,20 @@
         };
         combos {
                 compatible = "zmk,combos";
-                combo_ {
-                        timeout-ms = <50>;
-                        key-positions = <1 2>;
-                        bindings = <&kp Z>;
+                combo_cut {
+                        timeout-ms = <100>;
+                        key-positions = <25 26>;
+                        bindings = <&kp 1>;
+                };
+                combo_copy {
+                        timeout-ms = <100>;
+                        key-positions = <25 27>;
+                        bindings = <&kp 2>;
+                };
+                combo_paste {
+                        timeout-ms = <100>;
+                        key-positions = <25 28>;
+                        bindings = <&kp 3>;
                 };
         };
         keymap {
