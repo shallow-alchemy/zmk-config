@@ -25,19 +25,19 @@
                 td_cut: tap_dance_cut {
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
-                        tapping-term-ms = <200>;
+                        tapping-term-ms = <50>;
                         bindings = <&cht LCTRL X>, <&kp LG(X)>;
                 };
                 td_copy: tap_dance_copy {
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
-                        tapping-term-ms = <200>;
+                        tapping-term-ms = <50>;
                         bindings = <&cht LALT C>, <&kp LG(C)>;
                 };
                 td_paste: tap_dance_paste {
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
-                        tapping-term-ms = <200>;
+                        tapping-term-ms = <50>;
                         bindings = <&cht LGUI V>, <&kp LG(V)>;
                 };
         };
