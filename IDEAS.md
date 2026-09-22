@@ -62,6 +62,15 @@ the thumbs: one 200ms wait for the layer, not two.
 Test to confirm: in a text field, hold the Option thumb, count one, hold
 Space, count one, tap the minus key. It should type an en dash.
 
+Testing note: the Claude Code input is not a valid test. kitty has
+`macos_option_as_alt yes`, so Option+minus arrives as Alt+minus, and Claude
+Code binds nothing to Alt+minus, so nothing visible happens even when the
+keyboard is right. Use `kitten show-key -m kitty` in a spare pane: it
+prints `alt+minus` (keyboard fine, app ignores it) or `delete` (hold-tap
+timing). If the goal is typing an en or em dash in the terminal, that is a
+kitty setting (`macos_option_as_alt left` frees the right Option key for
+characters), not a keymap change.
+
 Implication for the Option/Ctrl swap above: the swap as sketched moves
 this exact problem onto Ctrl (Ctrl+C, Ctrl+A, and every Ctrl+layer key).
 Whichever modifier sits on that thumb should be a plain `&kp`, or a
