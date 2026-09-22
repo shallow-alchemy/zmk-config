@@ -71,6 +71,19 @@ timing). If the goal is typing an en or em dash in the terminal, that is a
 kitty setting (`macos_option_as_alt left` frees the right Option key for
 characters), not a keymap change.
 
+Target use (2026-09-21): Helix multi-cursor. Two neighbouring bindings:
+
+- `Alt-,` = remove_primary_selection (drops one cursor). Comma is on the
+  base layer, so this is Option thumb + comma: one 200ms hold, no layer.
+  If this also fails at speed, the hold-tap alone is the problem.
+- `Alt-minus` = merge_selections (collapse all cursors into one span).
+  Minus is on SYM, so this is the stacked 400ms case above.
+
+Cheapest fix if only Helix matters: remap in `~/.config/helix/config.toml`
+so both commands sit on base-layer keys, e.g. `A-m` = merge_selections.
+Fix that helps everywhere: make the Option thumb plain `&kp` or
+`hold-preferred`.
+
 Implication for the Option/Ctrl swap above: the swap as sketched moves
 this exact problem onto Ctrl (Ctrl+C, Ctrl+A, and every Ctrl+layer key).
 Whichever modifier sits on that thumb should be a plain `&kp`, or a
