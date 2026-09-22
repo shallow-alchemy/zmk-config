@@ -39,6 +39,35 @@ Things to think about before doing it:
 - tmux prefix and Helix bindings that lean on Ctrl should be re-tested on
   the new thumb.
 
+### Why Option+minus does not work (2026-09-21)
+
+Not the terminal: kitty has `macos_option_as_alt yes`, tmux has extended
+keys on, macOS layout is U.S., no Karabiner. It is firmware timing.
+
+1. Option is `&cht RALT DEL`, a `tap-preferred` hold-tap with a 200ms
+   term. It only becomes Option after 200ms of holding; released sooner
+   it taps DEL. Pressing other keys does not speed the decision up.
+2. Minus lives on SYM, reached by `&lt SYM SPACE`, which is also
+   `tap-preferred` with a 200ms term.
+3. ZMK captures every key pressed while a hold-tap is undecided and
+   replays it after the decision. So Space is not even looked at until
+   Option has resolved, and the minus key is not looked at until Space
+   has resolved. Option+minus needs both thumbs held for roughly 400ms
+   before the minus key counts. A normal chord is over in 150ms, so the
+   real output is DEL, a space, or the letter under the key.
+
+Ctrl and Cmd do not have this problem because they are plain `&kp` on
+the thumbs: one 200ms wait for the layer, not two.
+
+Test to confirm: in a text field, hold the Option thumb, count one, hold
+Space, count one, tap the minus key. It should type an en dash.
+
+Implication for the Option/Ctrl swap above: the swap as sketched moves
+this exact problem onto Ctrl (Ctrl+C, Ctrl+A, and every Ctrl+layer key).
+Whichever modifier sits on that thumb should be a plain `&kp`, or a
+`hold-preferred` hold-tap, not `tap-preferred`. DEL can move to the CTRL
+layer, which has room.
+
 ## Observations from reading the keymap (2026-09-21)
 
 - `media_layer` binds `&lt 5 SEMI` on the SEMI key, but there is no layer
