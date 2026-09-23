@@ -47,6 +47,13 @@
                         quick-tap-ms = <250>;
                         bindings = <&mo>, <&kp>;
                 };
+                // Shift+F on the CTRL layer clears Bluetooth; F alone does nothing.
+                btclr: bt_clear_shifted {
+                        compatible = "zmk,behavior-mod-morph";
+                        #binding-cells = <0>;
+                        bindings = <&none>, <&bt BT_CLR>;
+                        mods = <(MOD_LSFT|MOD_RSFT)>;
+                };
         };
         keymap {
                 compatible = "zmk,keymap";
@@ -84,9 +91,9 @@
                 control_layer {
                         display-name = "CTRL";
                         bindings = <
-   &none           &none           &kp ESC         &none           &none           &none           &none           &none           &kp UP          &none           &none           &none 
+   &none           &none           &kp ESC         &btclr          &bt BT_PRV      &bt BT_NXT      &none           &none           &kp UP          &none           &none           &none 
    &none           &kp LSHFT       &kp TAB         &none           &none           &none           &none           &kp LEFT        &kp DOWN        &kp RIGHT       &kp RSHFT       &none 
-   &none           &bt BT_PRV      &bt BT_NXT      &bt BT_CLR      &none           &none           &none           &none           &none           &none           &none           &none 
+   &none           &kp LSHFT       &kp LCTRL       &kp LALT        &none           &none           &none           &none           &none           &none           &none           &none 
                                                    &kp LALT        &kp LGUI        &lt SYM SPACE   &lt NUM RET     &qlt CTRL BSPC   &hpt RCTRL DEL
                         >;
                 };
