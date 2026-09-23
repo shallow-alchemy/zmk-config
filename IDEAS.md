@@ -12,7 +12,7 @@ right:  &lt NUM RET   &lt CTRL BSPC   &cht RALT DEL
 
 ## Ideas
 
-### Swap Option and Ctrl (2026-09-21)
+### Swap Option and Ctrl (2026-09-21) — BUILT, PR #1 (2026-09-23)
 
 Option (RALT, right outer thumb, tap = DEL) and Ctrl (LCTRL, left outer
 thumb) should switch places.
@@ -24,7 +24,13 @@ left:   &kp LALT      &kp LGUI        &lt SYM SPACE
 right:  &lt NUM RET   &lt CTRL BSPC   &cht LCTRL DEL
 ```
 
-Things to think about before doing it:
+Built as `&kp LALT` left / `&hpt RCTRL DEL` right, where `hpt` is a new
+hold-preferred hold-tap (see the Option+minus diagnosis below for why).
+The same PR also fixes two build breaks unrelated to the keymap: the
+Zephyr 4.1 board id (`nice_nano//zmk`) and the removed
+`CONFIG_WS2812_STRIP` symbol.
+
+Things that were thought about before doing it:
 
 - Ctrl becomes a hold-tap (`cht`, tap-preferred, 200ms). Fast Ctrl chords
   may tap DEL instead of holding Ctrl until the timing settles.
